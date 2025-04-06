@@ -141,7 +141,7 @@ To interact with the corpus and perform searches, you can run the Streamlit appl
 
 #### Streamlit Cloud
 
-The application is also deployed on [Streamlit Cloud](https://streamlit.io/cloud). You can access it directly without setting up a local environment by visiting the following link:
+The application is also deployed on [Streamlit Cloud](https://lis4693-project2.streamlit.app/). You can access it directly without setting up a local environment by visiting the following link:
 
 [Streamlit Cloud Deployment](https://streamlit.io/cloud)
 
