@@ -12,7 +12,9 @@ Authors: Cody Bennett
 """
 
 import streamlit as st
+import nltk
 
+nltk.download('stopwords')
 st.set_page_config(layout="wide", page_title="LIS 4693 - IR & Text Mining - Project 2")
 
 # Sidebar navigation
