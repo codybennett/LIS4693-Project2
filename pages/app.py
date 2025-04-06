@@ -49,10 +49,14 @@ with st.sidebar:
 st.markdown(
     """
     ## How to Use the App
-    1. **Search**: Enter a keyword or phrase in the search bar to find relevant documents.
-    2. **Filter**: Use the sidebar options to narrow down the results by specific criteria.
-    3. **Explore Results**: Expand the search results to view document snippets and full content.
-    4. **Export**: Click the "Export Corpus" button to save all documents to a text file.
+    1. **Search**:
+         Enter a keyword or phrase in the search bar to find relevant documents.
+    2. **Filter**:
+         Use the sidebar options to narrow down the results by specific criteria.
+    3. **Explore Results**:
+         Expand the search results to view document snippets and full content.
+    4. **Export**:
+         Click the "Export Corpus" button to save all documents to a text file.
     """
 )
 
