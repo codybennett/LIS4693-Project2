@@ -24,7 +24,7 @@ jobs:
     - name: Install Dependencies
       if: steps.cache-pipenv.outputs.cache-hit != 'true'
       run: |
-        pipenv install --system --deploy --dev
+        pipenv install
     - name: Analysing the code with pylint
       run: |
         pipenv run pylint $(git ls-files '*.py')
