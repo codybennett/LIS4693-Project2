@@ -1,4 +1,4 @@
-i https://pypi.org/simple
+-i https://pypi.org/simple
 altair==5.5.0; python_version >= '3.8'
 astroid==3.3.9; python_version >= '3.8'
 attrs==25.3.0; python_version >= '3.8'
