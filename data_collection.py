@@ -26,14 +26,24 @@ corpus = nltk.corpus.reuters
 
 # Collect all documents containing > 50 words
 tmp_documents = [
-    tmp_document for tmp_document in corpus.fileids() if len(corpus.words(tmp_document)) > 50
+    tmp_document
+    for tmp_document in corpus.fileids()
+    if len(corpus.words(tmp_document)) > 50
 ]
 
+
 class DataCollector:
+    """A class for collecting and processing documents from the Reuters corpus.
+
+    This class retrieves documents from the Reuters corpus that contain more than
+    50 words, organizes them into a directory structure, and provides methods to
+    access document content, metadata, and word counts.
+    """
+
     def __init__(self):
         """Retrieves Reuters corpus documents longer than 50 words."""
         logger.debug("Initializing DataCollector and downloading Reuters Corpus")
-        logger.info(f"Retrieving {len(tmp_documents)} documents matching criteria")
+        logger.info("Retrieving %d documents matching criteria", len(tmp_documents))
 
         # Initialize metadata dictionary
         self.document_metadata = {}
@@ -51,7 +61,7 @@ class DataCollector:
             self.document_metadata[doc_root]["num_documents"] += 1
             self.document_metadata[doc_root]["num_words"] += len(corpus.words(fileid))
 
-        logger.info(f"Corpus Metadata: {self.document_metadata}")
+        logger.info("Corpus Metadata: %s", self.document_metadata)
 
     def get_documents(self):
         """Returns documents in the corpus."""
@@ -65,12 +75,12 @@ class DataCollector:
         """Returns the specified document."""
         if fileid in self.documents:
             return corpus.raw(fileid)
-        logger.error(f"Document {fileid} not found in corpus.")
+        logger.error("Document %s not found in corpus.", fileid)
         return None
 
     def get_word_count(self, fileid):
         """Returns the word count for the specified document."""
         if fileid in self.documents:
             return len(corpus.words(fileid))
-        logger.error(f"Document {fileid} not found in corpus.")
+        logger.error("Document %s not found in corpus.", fileid)
         return None
