@@ -16,6 +16,8 @@ import nltk
 
 nltk.download('stopwords')
 nltk.download('punkt_tab')
+nltk.download('averaged_perceptron_tagger_eng')
+
 st.set_page_config(layout="wide", page_title="LIS 4693 - IR & Text Mining - Project 2")
 
 # Sidebar navigation
